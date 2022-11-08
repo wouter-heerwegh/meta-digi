@@ -252,7 +252,6 @@ SRC_URI =+ "${OPENCV_SRC};branch=${SRCBRANCH};name=opencv"
 SRCREV_extra = "855c4528402e563283f86f28c6393f57eb5dcf62"
 SRC_URI += " \
     git://github.com/opencv/opencv_extra.git;destsuffix=extra;name=extra \
-    file://0001-Add-smaller-version-of-download_models.py.patch;patchdir=../extra \
 "
 SRCREV_FORMAT_append = "_extra"
 
