@@ -8,7 +8,7 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/meta/files/common-licenses/BSD-3-Clause;m
 PV .= "+git${SRCPV}"
 
 SRCBRANCH = "lf_v2.4"
-ATF_SRC ?= "git://source.codeaurora.org/external/imx/imx-atf.git;protocol=https"
+ATF_SRC ?= "git://github.com/nxp-imx/imx-atf.git;protocol=https"
 SRC_URI = "${ATF_SRC};branch=${SRCBRANCH} \
 "
 SRCREV = "ba76d337e9564ea97b5024640b6dcca9bd054ffb"
@@ -17,6 +17,7 @@ SRC_URI_append_ccimx8mn = " file://0001-imx8mn-Define-UART1-as-console-for-boot-
                             file://0002-imx8mn-Disable-M7-debug-console.patch"
 SRC_URI_append_ccimx8mm = " file://0001-imx8mm-Define-UART1-as-console-for-boot-stage.patch \
                             file://0002-imx8mm-Disable-M4-debug-console.patch"
+SRC_URI_append_ccimx8m = " file://0003-TEE-639-plat-imx8m-Do-not-release-JR0-to-NS-if-HAB-i.patch"
 
 S = "${WORKDIR}/git"
 
